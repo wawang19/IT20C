@@ -6,7 +6,7 @@
 package DisplayViaforLoop;
 /**
  *
- * @author Joshua
+
  */
 public class DisplayViaforLoop {
      public static void main(String[] args) {
