@@ -24,7 +24,8 @@ public class MultidimensionalArray {
              for(int j = 0; j < programAndyear[i].length; j++ ) {
                  System.out.print(programAndyear[i][j] + " ");
              }
+             //Output
+             System.out.println();
          }
      }
 }
-            
