@@ -8,12 +8,22 @@ package SimpleImplementation;
 
 /**
  *
- * @author HP
+
  */
 public class SimpleImplementation {
     public static void main(String[] args) {
     
     //Array 
-    String[] names = {"Oscar", "Jay", "Wawang", "Kakang", "Ozzz"};   
+    String[] names = {"Oscar", "Jay", "Wawang", "Kakang", "Ozzz"};    
+    //Output and Process by calling its index to print values
+    
+    
+    System.out.println("Simple Names: " + names[0]);
+    System.out.println("Simple Names: " + names[1]);
+    System.out.println("Simple Names: " + names[2]);
+    System.out.println("Simple Names: " + names[3]);
+   System.out.println("Simple Names: " + names[4]);
+    
     }
-    }
+    
+}   
