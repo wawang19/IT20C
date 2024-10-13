@@ -9,7 +9,7 @@ package topic_3_stack;
 import java.util.Scanner;
 /**
  *
- * @author HP
+ 
  */
 public class Main {
    public static void main(String[] args) {
@@ -18,7 +18,7 @@ public class Main {
        
        Stack stack = new Stack(5);
 
-       System.out.println("Hello there!");
+       System.out.println("hiiiii!");
        
        while(true) {
            System.out.println("Choose what you want to do: "
