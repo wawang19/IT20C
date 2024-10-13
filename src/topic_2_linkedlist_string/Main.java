@@ -69,6 +69,22 @@ public class Main {
                         System.out.println("------------------------------");
                         list.printList();
                         break;   
+                 case 3:
+                        //Move/Swap Pointer
+                        System.out.println("Enter an index you want to swap: ");
+                        int item7 = sc.nextInt();
+
+                        System.out.println("Enter an index that you will swap: ");
+                        int item8 = sc.nextInt(); 
+                        
+                        System.out.println("Current Linked List:");
+                        list.printList();
+                        System.out.println("Moving/Swapping node from index " + item7 + " to index " + item8 );
+                        list.moveNodePointer(item7, item8);
+                        System.out.println("Current Linked List:");
+                        list.printList();
+                        System.out.println("------------------------------");
+                        break;
            }
         }
     }
