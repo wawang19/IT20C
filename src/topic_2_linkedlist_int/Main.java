@@ -9,7 +9,6 @@ import java.util.Scanner;
 
 /**
  *
- * @author ITLAB1-PC11-STUDENT
  */
 public class Main {
 
@@ -54,6 +53,5 @@ public class Main {
                         break;
             }
         }
-        
     }
 }
