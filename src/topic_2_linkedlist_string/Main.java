@@ -85,7 +85,14 @@ public class Main {
                         list.printList();
                         System.out.println("------------------------------");
                         break;
-           }
-        }
-    }
+                case 4:
+                        //Exit the program
+                        System.out.println("Thank you! Comeback and run it again.");
+                        System.exit(0);
+                        break;   
+                default:
+                        System.out.println("Invalid choice. Please select a valid option.");     
+           }         
+        }    
+	}
 }
