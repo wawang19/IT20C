@@ -19,7 +19,7 @@ public class Main {
 
         Scanner sc = new Scanner(System.in);
 
-        System.out.println("Hi!Welcome to the Linked List hehe");
+        System.out.println("Hiiii! Welcome to the Linked List.");
         System.out.println("~~~~~~~~~~~~~~~~~~~~~~");
 
         while(true) {
