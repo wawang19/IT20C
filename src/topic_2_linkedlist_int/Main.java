@@ -76,7 +76,15 @@ public class Main {
                         list.swapNodes(item7, item8);
                         list.printList();
                         break;
-            }
+           case 4:
+                        //Exit the program
+                        System.out.println("Thank you! Comeback again :)");
+                        System.exit(0);
+                        break;    
+                default:
+                        System.out.println("Invalid choice. Please select a valid option.");                      
+                }
+
         }
     }
 }
