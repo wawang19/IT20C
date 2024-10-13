@@ -63,6 +63,19 @@ public class Main {
                         list.deleteByValue(item6);
                         list.printList();
                         break;
+                case 3:
+                        //Swap Items
+                        System.out.println();
+                        System.out.println("Enter an index that you want to move: ");
+                        int item7 = sc.nextInt();
+                        System.out.println("Enter an index that you want to swap: ");
+                        int item8 = sc.nextInt();
+                        list.printList();
+
+                        System.out.println("Swapping node from index " + item7 + " to " + item8);
+                        list.swapNodes(item7, item8);
+                        list.printList();
+                        break;
             }
         }
     }

@@ -57,6 +57,60 @@ public class LinkedList {
                 current = current.next;
             }
         }
-}
 
+        //Method to swap items in the list
+        public void swapNodes(int index1, int index2) {
+
+            if (head == null || index1 == index2) return;
+
+            Node current1 = head;
+            Node prev1 = null;
+            Node current2 = head;
+            Node prev2 = null;
+
+            // Find the first node and its previous node
+            for (int i = 0; current1 != null && i < index1; i++) {
+                prev1 = current1;
+                current1 = current1.next;
+            }
+
+            // Find the second node and its previous node
+            for (int i = 0; current2 != null && i < index2; i++) {
+                prev2 = current2;
+                current2 = current2.next;
+            }
+
+            // If either node was not found
+            if (current1 == null || current2 == null) return;
+
+            // If they are adjacent
+            if (prev1 == current2) {
+                // Node1 comes before Node2
+                prev1.next = current2;
+                current1.next = current2.next;
+                current2.next = current1;
+            } else if (prev2 == current1) {
+                // Node2 comes before Node1
+                prev2.next = current1;
+                current2.next = current1.next;
+                current1.next = current2;
+            } else {
+                // Swap nodes that are not adjacent
+                if (prev1 != null) {
+                    prev1.next = current2;
+                } else {
+                    head = current2; // current1 is head
+                }
+                if (prev2 != null) {
+                    prev2.next = current1;
+                } else {
+                    head = current1; // current2 is head
+                }
+
+                Node temp = current2.next; // Save current2.next
+                current2.next = current1.next; // Point current2 to next of current1
+                current1.next = temp; // Point current1 to next of current2
+            }
+        }
+}
  
