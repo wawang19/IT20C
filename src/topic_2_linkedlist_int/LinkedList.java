@@ -35,4 +35,28 @@ public class LinkedList {
             }
             System.out.println("null");
         }
+  
+// Method to delete a node by value
+        public void deleteByValue(int value) {
+            if (head == null) return;
+
+            // If the head needs to be removed
+            if (head.data == value) {
+                head = head.next;
+                return;
+            } else if(head.data != value) {      
+
+            }
+
+            Node current = head;
+            while (current.next != null) {
+                if (current.next.data == value) {
+                    current.next = current.next.next; 
+                    return;
+                }
+                current = current.next;
+            }
+        }
 }
+
+ 
