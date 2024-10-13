@@ -55,7 +55,20 @@ public class Main {
                         list.printList();
                         System.out.println("------------------------------");
                         break;
-              
+                case 2:
+                        //Delete
+                        sc.nextLine();
+                        System.out.println("Enter an item you want to delete:");
+                        String item6 = sc.nextLine();
+
+                        list.deleteByValue(item6);
+                        System.out.println();
+
+                        System.out.println("------------------------------");        
+                        System.out.println("Current Linked List:");
+                        System.out.println("------------------------------");
+                        list.printList();
+                        break;   
            }
         }
     }
