@@ -41,5 +41,16 @@ public class Calculator extends JFrame implements ActionListener {
             buttonPanel.add(button);
         }
 
+        // Operation buttons
+        String[] operations = {"+", "-", "*", "/"};
+        for (String op : operations) {
+            JButton button = new JButton(op);
+            button.setFont(new Font("Arial", Font.BOLD, 16));
+            button.addActionListener(this);
+            buttonPanel.add(button);
+        }
+
+        add(buttonPanel, BorderLayout.CENTER);
     }
+
 }
