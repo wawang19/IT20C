@@ -33,5 +33,13 @@ public class Calculator extends JFrame implements ActionListener {
         JPanel buttonPanel = new JPanel();
         buttonPanel.setLayout(new GridLayout(5, 3, 10, 10));
 
+        // Number buttons (0-9)
+        for (int i = 0; i <= 9; i++) {
+            JButton button = new JButton(String.valueOf(i));
+            button.setFont(new Font("Arial", Font.BOLD, 16));
+            button.addActionListener(this);
+            buttonPanel.add(button);
+        }
+
     }
 }
