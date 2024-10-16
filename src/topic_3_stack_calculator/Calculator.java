@@ -22,5 +22,12 @@ public class Calculator extends JFrame implements ActionListener {
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setLayout(new BorderLayout(10, 10));
 
+        // Display area
+        display = new JTextArea(5, 20);
+        display.setEditable(false);
+        display.setFont(new Font("Arial", Font.PLAIN, 16));
+        display.setMargin(new Insets(10, 10, 10, 10));
+        add(new JScrollPane(display), BorderLayout.NORTH);
+
     }
 }
