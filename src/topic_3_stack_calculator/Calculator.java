@@ -53,4 +53,65 @@ public class Calculator extends JFrame implements ActionListener {
         add(buttonPanel, BorderLayout.CENTER);
     }
 
+    @Override
+    public void actionPerformed(ActionEvent e) {
+        String command = e.getActionCommand();
+
+        if ("0123456789".contains(command)) {
+            // Push number to stack
+            int number = Integer.parseInt(command);
+            stack.push(number);
+            displayStack();
+        } else {
+            // Perform operation
+            performOperation(command);
+        }
+    }
+
+    private void performOperation(String operation) {
+        if (stack.size() < 2) {
+            display.append("Need at least two numbers on the stack.\n");
+            return;
+        }
+
+        int b = stack.pop();
+        int a = stack.pop();
+        int result = 0;
+
+        switch (operation) {
+            case "+":
+                result = a + b;
+                break;
+            case "-":
+                result = a - b;
+                break;
+            case "*":
+                result = a * b;
+                break;
+            case "/":
+                if (b == 0) {
+                    display.append("Cannot divide by zero.\n");
+                    stack.push(a);
+                    stack.push(b);
+                    return;
+                }
+                result = a / b;
+                break;
+        }
+
+        stack.push(result);
+        display.append("Result of " + a + " " + operation + " " + b + " = " + result + "\n");
+        displayStack();
+    }
+
+    private void displayStack() {
+        display.append("Current Stack: " + stack + "\n\n");
+    }
+
+    public static void main(String[] args) {
+        SwingUtilities.invokeLater(() -> {
+            Calculator calculator = new Calculator();
+            calculator.setVisible(true);
+        });
+    }
 }
