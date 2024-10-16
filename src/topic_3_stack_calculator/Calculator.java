@@ -29,5 +29,9 @@ public class Calculator extends JFrame implements ActionListener {
         display.setMargin(new Insets(10, 10, 10, 10));
         add(new JScrollPane(display), BorderLayout.NORTH);
 
+        // Button panel
+        JPanel buttonPanel = new JPanel();
+        buttonPanel.setLayout(new GridLayout(5, 3, 10, 10));
+
     }
 }
