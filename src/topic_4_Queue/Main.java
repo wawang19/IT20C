@@ -7,7 +7,7 @@ package topic_4_queue;
 
 /**
  *
- * @author ITLAB2-PC14-pagongpong
+
  */
 import java.util.Scanner;
 public class Main {
@@ -32,6 +32,43 @@ public class Main {
                  System.out.println("3. Display");
                  System.out.println("4. Leave");
                  
+                 String choice = scan.nextLine();
+                 
+                 // Adding customers to the queue
+                 if(choice.contentEquals("1")){
+                     System.out.println("What do you want to add in the queue?");
+                     String toAdd = scan.nextLine();
+                     customerQueue.enqueue(new Customer(toAdd));
+                     
+            
+                     
                  }
-    }
+                 // Serve 
+                 else if(choice.contentEquals("2")){
+                     customerQueue.dequeue();
+                     
+                 }
+                 
+                 //display
+                 else  if(choice.contentEquals("3")){
+                     customerQueue.displayQueue();
+                 }
+                 
+                 else if(choice.contentEquals("4")){
+                     System.out.println("Thank you");
+                     break;
+                     
+                     
+                 }
+                 
+                 
+                 
+                 
+                 
+                 }
+                 
+ 
+
+	}
+
 }
